@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>联系我们</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="./dist/index.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=CnvLGkVbn7Ah2WPpUAWKsorAAr0TFfWF"></script>
+</head>
+<body>
+<div class="hd">
+    <div class="logo"></div>
+    <ul class="navs">
+        <li class="list-1"><a href="index.html">首页</a></li>
+        <li class="list-2"><a href="anenst.html">关于我们</a></li>
+        <li class="list-3"><a href="hotnews.html">最新消息</a></li>
+        <li class="list-4"><a href="partner.html">合作伙伴</a></li>
+        <li class="list-5"><a href="contact.html"  class="red">联系我们</a></li>
+    </ul>
+</div>
+<div class="an-bd">
+    <div class="red-border"></div>
+    <div class="an-bread">
+        <a href="index.html">首页</a> ＞
+        <a href="anenst.html" style="color: #E50B00;">联系我们</a>
+    </div>
+    <div class="an-detail">
+        <div class="an-det-left">
+            <div class="con-top">
+                <div class="con-t-left"></div>
+                <div class="con-t-right">
+                    <h3>谢谢您对鑫旺远通的关注,</h3>
+                    <h3>如果您有任何问题或意见请通过以下方式和我们联系。</h3>
+                    <h4>北京鑫旺远通资产管理有限责任公司</h4>
+                    <h5>北京市海淀区上地信息路2号院1号楼17层17D</h5>
+                    <h6>邮政编码</h6>
+                    <span></span>
+                </div>
+            </div>
+            <div class="con-map">
+                <div style="width:820px;height:243px;border:#ccc solid 1px;font-size:12px" id="map"></div>
+            </div>
+
+        </div>
+        <!--右侧导航-->
+        <div class="an-det-right">
+            <div class="contact-logo"></div>
+            <ul class="an-nav-ts">
+                <li class="pitch">联系我们</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+<div class="fd">
+    <div class="copyright">©2017 鑫旺远通控股集团              北京市海淀区上地国际创业园2号院一号楼17层</div>
+</div>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){
+        map = new BMap.Map("map");
+        map.centerAndZoom(new BMap.Point(116.290638,40.060063),15);
+    }
+    function setMapEvent(){
+        map.enableScrollWheelZoom();
+        map.enableKeyboard();
+        map.enableDragging();
+        map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+        target.addEventListener("click",function(){
+            target.openInfoWindow(window);
+        });
+    }
+    function addMapOverlay(){
+        var markers = [
+            {content:"",title:"上地国际创业园2号院1号楼",imageOffset: {width:0,height:3},position:{lat:40.053043,lng:116.312369}}
+        ];
+        for(var index = 0; index < markers.length; index++ ){
+            var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+            var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+                imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+            })});
+            var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+            var opts = {
+                width: 200,
+                title: markers[index].title,
+                enableMessage: false
+            };
+            var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+            marker.setLabel(label);
+            addClickHandler(marker,infoWindow);
+            map.addOverlay(marker);
+        };
+    }
+    //向地图添加控件
+    function addMapControl(){
+        var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+        scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+        map.addControl(scaleControl);
+        var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+        map.addControl(navControl);
+        var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+        map.addControl(overviewControl);
+    }
+    var map;
+    initMap();
+</script>
+</body>

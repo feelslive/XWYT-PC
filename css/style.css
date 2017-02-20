@@ -1,0 +1,334 @@
+@charset "UTF-8";
+@import url(./common.css);
+@import url(./animate.min.css);
+body {
+  background: url("../img/bg.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow-y: hidden; }
+
+.hd {
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+  overflow: hidden; }
+  .hd .logo {
+    float: left;
+    width: 212px;
+    height: 50px;
+    margin-top: 25px;
+    background: url("../img/logo.png") no-repeat; }
+  .hd .navs {
+    float: right;
+    width: 800px;
+    line-height: 100px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 700; }
+    .hd .navs li {
+      float: left;
+      display: none;
+      margin: 0 0 0 100px;
+      text-align: center; }
+
+.bd {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden; }
+  .bd .present {
+    display: none;
+    width: 380px;
+    height: 180px;
+    margin-top: 100px;
+    padding: 35px 35px;
+    border: 1px solid #e8e8e8;
+    background-color: rgba(255, 255, 255, 0.8); }
+    .bd .present h1 {
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 20px; }
+      .bd .present h1 span {
+        color: #E50B00; }
+    .bd .present p {
+      font-size: 14px;
+      line-height: 24px; }
+    .bd .present .more {
+      display: block;
+      width: 90px;
+      height: 24px;
+      margin-top: 30px;
+      background: url("../img/more.png") no-repeat; }
+
+.fd {
+  width: 1200px;
+  height: 50px;
+  margin: 0 auto; }
+  .fd .copyright {
+    margin: 0 auto;
+    text-align: center;
+    width: 1200px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0; }
+
+.an-bd {
+  display: none;
+  width: 1200px;
+  height: 700px;
+  margin: 38px auto 0 auto;
+  background-color: #fff;
+  position: relative; }
+  .an-bd .red-border {
+    width: 146px;
+    height: 0;
+    border: 2px solid #E50B00; }
+  .an-bd .an-bread {
+    width: 1126px;
+    height: 40px;
+    line-height: 40px;
+    margin: 30px auto 0 auto;
+    border-bottom: 4px solid #CBCBCB; }
+    .an-bd .an-bread a {
+      color: #7B6967;
+      font-size: 14px;
+      font-weight: 700; }
+  .an-bd .an-detail {
+    width: 1126px;
+    height: 623px;
+    margin: 0 auto; }
+    .an-bd .an-detail .an-det-right {
+      width: 258px;
+      height: 622px;
+      float: right;
+      border-left: 1px solid #e8e8e8;
+      border-right: 1px solid #e8e8e8;
+      position: relative; }
+      .an-bd .an-detail .an-det-right .an-nav,
+      .an-bd .an-detail .an-det-right .an-hotnav,
+      .an-bd .an-detail .an-det-right .partner-logo,
+      .an-bd .an-detail .an-det-right .contact-logo {
+        height: 120px;
+        width: 260px;
+        position: absolute;
+        top: -120px;
+        left: -1px; }
+      .an-bd .an-detail .an-det-right .an-nav {
+        background: url("../img/an-nav.png") no-repeat; }
+      .an-bd .an-detail .an-det-right .an-hotnav {
+        background: url("../img/an-hotnav.png") no-repeat; }
+      .an-bd .an-detail .an-det-right .partner-logo {
+        background: url("../img/partner.png") no-repeat; }
+      .an-bd .an-detail .an-det-right .contact-logo {
+        background: url("../img/contact.png") no-repeat; }
+      .an-bd .an-detail .an-det-right ul li {
+        width: 258px;
+        height: 45px;
+        font-size: 16px;
+        text-indent: 30px;
+        line-height: 45px;
+        cursor: pointer; }
+      .an-bd .an-detail .an-det-right ul .pitch {
+        background-color: #EDEDED; }
+    .an-bd .an-detail .an-det-left {
+      width: 850px;
+      height: 593px;
+      float: left;
+      overflow: auto; }
+      .an-bd .an-detail .an-det-left .an-ring {
+        margin-top: 44px;
+        padding-bottom: 30px;
+        padding-right: 30px; }
+        .an-bd .an-detail .an-det-left .an-ring h3 {
+          font-size: 24px;
+          color: #333; }
+        .an-bd .an-detail .an-det-left .an-ring span {
+          display: block;
+          margin-top: 10px;
+          font-size: 14px;
+          color: #7B6967; }
+      .an-bd .an-detail .an-det-left p {
+        font-size: 14px;
+        color: #7B6967;
+        margin: 20px 0;
+        text-indent: 30px; }
+      .an-bd .an-detail .an-det-left .an-img {
+        width: 200px;
+        height: 240px;
+        margin: 0 20px 20px 20px;
+        float: right; }
+        .an-bd .an-detail .an-det-left .an-img img {
+          width: 100%;
+          height: 100%; }
+      .an-bd .an-detail .an-det-left .an-per-dw span {
+        display: block;
+        margin-top: 5px;
+        text-align: center; }
+      .an-bd .an-detail .an-det-left .an-per-dw .dw-img {
+        width: 140px;
+        height: 168px;
+        overflow: hidden; }
+        .an-bd .an-detail .an-det-left .an-per-dw .dw-img img {
+          width: 100%;
+          height: 100%; }
+      .an-bd .an-detail .an-det-left .an-per-dw ul li {
+        float: left;
+        margin: 0 33px;
+        cursor: pointer; }
+      .an-bd .an-detail .an-det-left .an-per-up {
+        overflow: hidden;
+        cursor: pointer;
+        margin-bottom: 35px;
+        margin-right: 20px; }
+        .an-bd .an-detail .an-det-left .an-per-up span {
+          display: block;
+          margin-top: 5px;
+          text-align: center; }
+        .an-bd .an-detail .an-det-left .an-per-up .per-img {
+          margin: 30px auto 0 auto; }
+  .an-bd .an-mask {
+    width: 100%;
+    height: 10000px;
+    opacity: 0.5;
+    /*半透明*/
+    filter: alpha(opacity=50);
+    /*ie 6半透明*/
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1000; }
+  .an-bd .an-show {
+    width: 800px;
+    height: 550px;
+    background-color: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    border: 4px solid #C4C4C4;
+    padding: 0 50px 50px 50px;
+    margin: -300px 0 0 -450px;
+    display: none;
+    z-index: 10000;
+    overflow: auto; }
+    .an-bd .an-show p {
+      margin: 30px 0;
+      font-size: 16px;
+      text-indent: 30px; }
+    .an-bd .an-show .per-img {
+      margin: 30px auto 0 auto; }
+
+.hotnav-det {
+  width: 320px;
+  height: 460px;
+  float: left;
+  margin-top: 54px;
+  padding: 20px;
+  background-color: #DDDDDD;
+  overflow: hidden; }
+  .hotnav-det .hot-tit {
+    padding-bottom: 18px;
+    overflow: hidden;
+    border-bottom: 2px dashed #6E6E6E; }
+    .hotnav-det .hot-tit h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #333; }
+  .hotnav-det .hot-p {
+    width: 100%;
+    height: 360px;
+    overflow: hidden; }
+  .hotnav-det a {
+    display: block;
+    margin-top: 10px;
+    float: right;
+    color: #E50B00; }
+
+.hotnav-list {
+  width: 440px;
+  height: 460px;
+  float: right;
+  margin-top: 54px;
+  padding: 20px 0;
+  overflow: auto; }
+  .hotnav-list h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px; }
+  .hotnav-list ul li {
+    margin: 10px 0;
+    width: 100%;
+    height: 30px; }
+    .hotnav-list ul li a {
+      display: block;
+      float: left;
+      width: 280px;
+      color: #7B6967;
+      font-size: 14px;
+      overflow: hidden;
+      /*自动隐藏文字*/
+      text-overflow: ellipsis;
+      /*文字隐藏后添加省略号*/
+      white-space: nowrap;
+      /*强制不换行*/ }
+    .hotnav-list ul li span {
+      float: right;
+      margin-right: 18px; }
+
+.partner-lists {
+  margin-top: 40px; }
+  .partner-lists li {
+    width: 240px;
+    height: 160px;
+    float: left;
+    margin: 10px 17px; }
+
+.con-top {
+  width: 100%;
+  height: 286px;
+  margin: 25px 0 0 0; }
+  .con-top .con-t-left {
+    width: 298px;
+    height: 266px;
+    float: left;
+    background: url("../img/beijing.png") no-repeat; }
+  .con-top .con-t-right {
+    width: 516px;
+    height: 246px;
+    float: right;
+    padding-top: 40px; }
+    .con-top .con-t-right h3 {
+      font-size: 18px;
+      color: #AB7539;
+      font-weight: 700;
+      letter-spacing: 1px; }
+    .con-top .con-t-right h4 {
+      font-size: 18px;
+      margin-top: 30px;
+      color: #656565;
+      font-weight: 700;
+      letter-spacing: 2px; }
+    .con-top .con-t-right h5 {
+      font-size: 14px;
+      color: #7B6967;
+      font-weight: 700; }
+    .con-top .con-t-right h6 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #7B6967;
+      margin: 30px 0 5px 0; }
+    .con-top .con-t-right span {
+      width: 97px;
+      height: 18px;
+      display: block;
+      background: url("../img/code.png"); }
+
+.con-map {
+  width: 820px;
+  height: 243px;
+  margin-top: 15px;
+  background: url("../img/map.jpg") no-repeat; }
